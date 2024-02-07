@@ -50,18 +50,18 @@ public class ExcelExportService {
                     XSSFCell DataCell = DataRow.createCell(CellIndex++);
 
                    if (value != null) {
-						if (value instanceof String) {
-							DataCell.setCellValue((String) value);
-						} else if (value instanceof Long) {
-							DataCell.setCellValue((Long) value);
-						} else if (value instanceof Integer) {
-							DataCell.setCellValue((Integer) value);
-						} else if (value instanceof Double) {
-                            DataCell.setCellValue((Double) value);
-						} else {
-							DataCell.setCellValue((String) value);
+			if (value instanceof String) {
+				DataCell.setCellValue((String) value);
+			} else if (value instanceof Long) {
+				DataCell.setCellValue((Long) value);
+			} else if (value instanceof Integer) {
+				DataCell.setCellValue((Integer) value);
+			} else if (value instanceof Double) {
+                               DataCell.setCellValue((Double) value);
+			} else {
+			      DataCell.setCellValue((String) value);
                         }
-					}
+		   }
 
                 } catch (IllegalArgumentException | IllegalAccessException e) {
                     e.printStackTrace();
